@@ -1,11 +1,12 @@
-/* external css: flickity.css */
 
-* { box-sizing: border-box; }
+* { box-sizing: border-box;
+ }
 
-body { font-family: sans-serif; }
+body { font-family: sans-serif; 
+}
 
-/* prevent vertical scroll bar glitch */
-html { overflow-y: scroll; }
+html { overflow-y: scroll; 
+}
 
 .carousel {
   background: #EEE;
@@ -21,6 +22,7 @@ html { overflow-y: scroll; }
   flex-direction: column;
   justify-content: center;
 }
+
 .button{
     position:absolute;
     z-index: 1;
@@ -41,8 +43,8 @@ html { overflow-y: scroll; }
     height: 20px;
     width: 0;
     background: #333;
-  }
-  .container{
+}
+.container{
       color: #fff;
       max-width: 1200px;
       margin: 0 auto;
@@ -52,4 +54,4 @@ html { overflow-y: scroll; }
       border-radius: 5px;
       padding: 3px;    
       text-align: center;
-  }
+}
