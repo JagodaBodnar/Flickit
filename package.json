@@ -30,6 +30,7 @@
   "homepage": "https://github.com/JagodaBodnar/Dashboard#readme",
   "dependencies": {
     "browser-sync": "^2.26.5",
+    "node-sass": "^4.13.0",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
