@@ -1,6 +1,25 @@
+const slider = document.getElementById('slide-template').innerHTML;
+
+Mustache.parse(slider);
+
+let slideItems = '';
+
+for (var i = 0; i < slidesData.length; i++) {
+    slideItems += Mustache.render(slider, slidesData[i]);
+}
+
+const carousel = document.getElementById('carousel');
+
+
+carousel.insertAdjacentHTML('beforeend', slideItems);
+
+
+
+
+
 var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity( elem, {
-    freeScroll: true,
+    cellAlign: 'left',
     contain: true,
     pageDots: false,
     hash: true
@@ -29,3 +48,4 @@ flkty.on( 'scroll', function( progress ) {
   progress = Math.max( 0, Math.min( 1, progress ) );
   progressBar.style.width = progress * 100 + '%';
 });
+

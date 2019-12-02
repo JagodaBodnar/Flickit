@@ -11,20 +11,53 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-            <div class="button-group">
-                    <button class="button">Restart</button>
-                  </div>
-        <div class="main-carousel">
-            <div class="carousel-cell" id="carousel-cell1" style="background-image: url('images/1.jpg'); background-size: cover;"><div class="container">Coloseum</div></div>
-            <div class="carousel-cell" id="carousel-cell2" style="background-image: url('images/2.jpg'); background-size: cover;"><div class="container">Stonehage</div></div>
-            <div class="carousel-cell" id="carousel-cell3" style="background-image: url('images/3.jpg'); background-size: cover;"><div class="container">Arashiyama Bamboo Forest</div></div>
-            <div class="carousel-cell" id="carousel-cell4" style="background-image: url('images/4.jpg'); background-size: cover;"><div class="container">Grand Canyon</div></div>
-            <div class="carousel-cell" id="carousel-cell5" style="background-image: url('images/5.jpg'); background-size: cover;"><div class="container">Machu Picchu</div></div>
-          </div>
-          <div class="progress-bar"></div>
+        <div class="button-group">
+            <button class="button">Restart</button>
+        </div>
+        <div class="main-carousel" id="carousel">
+        </div>
+        <div class="progress-bar"></div>
+        
 
+        <script id="slide-template" type="x-tmpl-mustache">
+            <div class="carousel-cell" id="{{id}}" style="background-image: url({{image}}); background-size: cover;">
+              <div class="container">{{{description}}}</div>
+            </div>
+        </script>
+  
+        <script>
+          let slidesData = [
+            {
+              image: 'images/1.jpg', 
+              id: 'carousel-cell1',
+              description: '<h2 class="title">Coloseum</h2>'
+            },
+            {
+              image: 'images/2.jpg', 
+              id: 'carousel-cell2',
+              description: '<h2 class="title">Stonehage</h2>'
+            },
+            {
+              image: 'images/3.jpg', 
+              id: 'carousel-cell3',
+              description: '<h2 class="title">Arashiyama Bamboo Forest</h2>'
+            },
+            {
+              image: 'images/4.jpg', 
+              id: 'carousel-cell4',
+              description: '<h2 class="title">Grand Canyon</h2>'
+            },
+            {
+              image: 'images/5.jpg', 
+              id: 'carousel-cell5',
+              description: '<h2 class="title">Machu Picchu</h2>'
+            }
+          ];
+        </script>
         <script src="vendor/flickity.pkgd.min.js"></script>
         <script src="vendor/hash.js"></script>
+        <script src="vendor/mustache.js"></script>
         <script src="js/script.js"></script>
+        
     </body>
 </html>

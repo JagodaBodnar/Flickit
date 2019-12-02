@@ -45,13 +45,14 @@ html { overflow-y: scroll;
     background: #333;
 }
 .container{
-      color: #fff;
       max-width: 1200px;
-      margin: 0 auto;
-      font-family: 'Roboto Mono', monospace;
+      .title{
       font-size: 40px;
       background-color:rgba(0, 0, 0, 0.5);
-      border-radius: 5px;
-      padding: 3px;    
+      border-radius: 5px;   
       text-align: center;
+      font-family: 'Roboto Mono', monospace;
+      margin:0;
+      padding: 0;
+      }
 }
