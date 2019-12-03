@@ -62,6 +62,14 @@ flkty.on( 'scroll', function( progress ) {
         position: slidesData[i].coords,
         map: map,
     })
+    marker.addListener('click', function () {
+      flkty.selectCell(this.slide)
+      console.log(this);
+  })
 }
+  flkty.on('change', function (index) {
+  map.setCenter(slidesData[index].coords)
+  map.setZoom(10);
+  });
 })();
 
