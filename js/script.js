@@ -49,3 +49,19 @@ flkty.on( 'scroll', function( progress ) {
   progressBar.style.width = progress * 100 + '%';
 });
 
+(function(){
+  window.initMap = function(){
+    let map = new google.maps.Map(document.getElementById('map'),
+    {
+      zoom: 8,
+      center: slidesData[0].coords
+    });
+  };
+  for (let i = 0; i < slidesData.length; i++) {
+    let marker = new google.maps.Marker({
+        position: slidesData[i].coords,
+        map: map,
+    })
+}
+})();
+

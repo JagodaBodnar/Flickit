@@ -14,9 +14,11 @@
         <div class="button-group">
             <button class="button">Restart</button>
         </div>
-        <div class="main-carousel" id="carousel">
-        </div>
+        <div class="main-carousel" id="carousel"> </div>
         <div class="progress-bar"></div>
+        <div class="map-wrapper">
+            <div id="map"></div>
+        </div>
         
 
         <script id="slide-template" type="x-tmpl-mustache">
@@ -30,27 +32,47 @@
             {
               image: 'images/1.jpg', 
               id: 'carousel-cell1',
-              description: '<h2 class="title">Coloseum</h2>'
+              description: '<h2 class="title">Coloseum</h2>',
+              coords: {
+                    lat: 41.890293,
+                    lng: 12.4911929
+              }
             },
             {
               image: 'images/2.jpg', 
               id: 'carousel-cell2',
-              description: '<h2 class="title">Stonehage</h2>'
+              description: '<h2 class="title">Stonehage</h2>',
+              coords: {
+                    lat: 51.1789345,
+                    lng: -1.8266354
+              }
             },
             {
               image: 'images/3.jpg', 
               id: 'carousel-cell3',
-              description: '<h2 class="title">Arashiyama Bamboo Forest</h2>'
+              description: '<h2 class="title">Arashiyama Bamboo Forest</h2>',
+              coords: {
+                    lat: 35.0173221,
+                    lng: 135.6720986
+              }
             },
             {
               image: 'images/4.jpg', 
               id: 'carousel-cell4',
-              description: '<h2 class="title">Grand Canyon</h2>'
+              description: '<h2 class="title">Grand Canyon</h2>',
+              coords: {
+                    lat: 36.0922147,
+                    lng: -113.4035599
+              }
             },
             {
               image: 'images/5.jpg', 
               id: 'carousel-cell5',
-              description: '<h2 class="title">Machu Picchu</h2>'
+              description: '<h2 class="title">Machu Picchu</h2>',
+              coords: {
+                    lat: -13.163025,
+                    lng: -72.545090
+              }
             }
           ];
         </script>
@@ -58,6 +80,9 @@
         <script src="vendor/hash.js"></script>
         <script src="vendor/mustache.js"></script>
         <script src="js/script.js"></script>
+        <script async defer 
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmZqiVIpl65bpqc3enoqMSn8Rhzdor2yY&callback=initMap">
+        </script>
         
     </body>
 </html>
